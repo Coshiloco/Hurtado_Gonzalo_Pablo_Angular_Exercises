@@ -323,3 +323,23 @@ a {
   }
 }
 /* END: trending media queries */
+
+/* START: footer media querie */
+@media screen and (min-width: 1024px) {
+  .footer__nav {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer__nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer__nav {
+    display: block;
+  }
+}
+/* END: footer media queries */
