@@ -1,0 +1,29 @@
+<header>
+  <nav class="header__nav">
+    <div class="header__logo">
+      <h4 data-aos="fade-down">{{ menuTitle }}</h4>
+      <div class="header__logo-overlay"></div>
+    </div>
+
+    <ul class="header__menu" [class.show]="menuOpen" data-aos="fade-down">
+      <li>
+        <a href="#">{{ ExerciseOne }}</a>
+      </li>
+      <li>
+        <a href="#">{{ ExerciseTwo }}</a>
+      </li>
+      <li>
+        <a href="#">{{ ExerciseThree }}</a>
+      </li>
+      <li>
+        <img src="../assets/search.svg" alt="search" />
+      </li>
+    </ul>
+
+    <ul class="header__menu-mobile" data-aos="fade-down">
+      <li>
+        <img (click)="toggleMenu()" src="../assets/menu.svg" alt="menu" />
+      </li>
+    </ul>
+  </nav>
+</header>
