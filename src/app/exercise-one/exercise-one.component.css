@@ -1,0 +1,34 @@
+.styling-form {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: auto;
+}
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.align-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.message {
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%; /* Cambia max-width a width */
+  margin: 20px 0; /* Cambia margin para eliminar el centrado automático */
+  text-align: center;
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+}
+
+.white-label {
+  font-size: 2rem;
+  color: white;
+}

@@ -11,6 +11,73 @@
         Project done with Angular FrameWork, click in the menu for see and test
         the Exercises
       </p>
+      <form class="styling-form">
+        <label for="name" class="white-label">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="name"
+          class="form-input"
+        />
+
+        <label for="font" class="white-label">Font:</label>
+        <select id="font" name="font" [(ngModel)]="font" class="form-input">
+          <option value="Arial">Arial</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier New">Courier New</option>
+          <!-- Agrega aquí las fuentes que desees -->
+        </select>
+
+        <label for="size" class="white-label">Size:</label>
+        <input
+          type="number"
+          id="size"
+          name="size"
+          [(ngModel)]="size"
+          class="form-input"
+        />
+
+        <div class="align-options">
+          <label for="align-left" class="white-label">Left</label>
+          <input
+            type="radio"
+            id="align-left"
+            name="align"
+            value="left"
+            [(ngModel)]="align"
+          />
+
+          <label for="align-right" class="white-label">Right</label>
+          <input
+            type="radio"
+            id="align-right"
+            name="align"
+            value="right"
+            [(ngModel)]="align"
+          />
+
+          <label for="align-center" class="white-label">Center</label>
+          <input
+            type="radio"
+            id="align-center"
+            name="align"
+            value="center"
+            [(ngModel)]="align"
+          />
+        </div>
+      </form>
+
+      <!-- Lugar para mostrar el mensaje "Hello NAME!" -->
+      <div
+        id="message"
+        class="message"
+        [style.font-family]="font"
+        [style.font-size.px]="size"
+        [style.text-align]="align"
+      >
+        {{ name.toUpperCase() }}
+      </div>
     </div>
   </div>
 </section>
