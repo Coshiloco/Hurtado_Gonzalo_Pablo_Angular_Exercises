@@ -9,8 +9,8 @@ export class HeaderComponentComponent {
   public menuOpen: Boolean = false;
   @Input() menuTitle: string = 'ANGULAR EXERCISES';
   @Input() ExerciseOne: string = 'ExerciseOne';
-  @Input() ExerciseTwo: string = 'ExerciseOne';
-  @Input() ExerciseThree: string = 'ExerciseOne';
+  @Input() ExerciseTwo: string = 'ExerciseTwo';
+  @Input() ExerciseThree: string = 'ExerciseThree';
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
