@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
-/* other css file imports */
-@import url("./app/header.css");
-@import url("./app/hero.css");
-@import url("./app/footer.css");
-
 /* CSS variables for reusablity across all files (including above imported) */
 :root {
   --playfair-display: "Playfair Display", serif;
@@ -40,6 +35,73 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.hero {
+  display: flex;
+  min-height: calc(100vh - 74px);
+  overflow: hidden;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  z-index: 5;
+}
+
+.hero-image__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero-image h2 {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+
+  font-family: var(--playfair-display);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 138px;
+  color: #fff;
+}
+
+.hero-content {
+  flex: 1.22;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hero-content-info {
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-content-info h1 {
+  font-size: 80px;
+  font-weight: 600px;
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+}
+
+.hero-content-info p {
+  margin: 32px 0 0 32px;
+
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .flex-center {
