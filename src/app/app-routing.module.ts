@@ -7,8 +7,9 @@ import { ExerciseTwoComponent } from './exercise-two/exercise-two.component';
 const routes: Routes = [
   { path: '', component: ExerciseOneComponent },
   { path: 'exercise-one', component: ExerciseOneComponent },
-  { path: 'exercise-one', component: ExerciseTwoComponent },
-  { path: 'exercise-one', component: ExerciseThreeComponent },
+  { path: 'exercise-two', component: ExerciseTwoComponent },
+  { path: 'exercise-three', component: ExerciseThreeComponent },
+  { path: '', redirectTo: '/exercise-one', pathMatch: 'full' },
 ];
 
 @NgModule({
