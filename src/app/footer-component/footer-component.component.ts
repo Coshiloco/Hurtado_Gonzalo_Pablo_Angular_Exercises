@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-footer-component',
   templateUrl: './footer-component.component.html',
-  styleUrls: ['./footer-component.component.css', './footer.css'],
+  styleUrls: ['./footer-component.component.css'],
 })
 export class FooterComponentComponent {
   @Input() ulOne: string = 'ExerciseOne';
