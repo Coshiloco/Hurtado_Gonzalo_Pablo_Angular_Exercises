@@ -6,11 +6,49 @@
 
   <div class="hero-content">
     <div class="hero-content-info" data-aos="fade-left">
-      <h1>Pablo Hurtado Gonzalo Exercises</h1>
+      <h1>Pablo Hurtado Gonzalo Exercise Three</h1>
       <p>
-        Project done with Angular FrameWork, click in the menu for see and test
-        the Exercises
+        Make a multi-page application (with ngRoute) that displays a bank
+        transaction report. • On the home page, list the transactions in the
+        transactions.json file. • The list of transactions must be in a table
+        with the possibility of sorting according to each criterion. • A click
+        on a row of the table must allow to display the detail of an operation
+        on a separate page, to be recovered in one of the id.json files. • At
+        the top of all pages must be a common part with the date and time
+        updated every second. The files transactions.json and id.json are there
+        to simulate a web-service. They must be queried via the httpClient or
+        httpClientModule service.
       </p>
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th (click)="sort('id')">ID</th>
+            <th (click)="sort('amount')">Amount</th>
+            <th (click)="sort('balance')">Balance</th>
+            <th (click)="sort('label')">Label</th>
+            <th (click)="sort('description')">Description</th>
+            <th (click)="sort('date')">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.balance }}</td>
+            <td>{{ transaction.label }}</td>
+            <td>{{ transaction.description }}</td>
+            <td>{{ transaction.date }}</td>
+            <td>
+              <button
+                class="details-button"
+                routerLink="/details/{{ transaction.id }}"
+              >
+                Details
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>

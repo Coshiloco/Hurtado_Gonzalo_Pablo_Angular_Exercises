@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero-image">
+    <h2 data-aos="fade-up">Pablo Hurtado Gonzalo Angular Exercises Three</h2>
+    <div class="hero-image__overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-content-info" data-aos="fade-left">
+      <h1>Pablo Hurtado Gonzalo Exercise Three</h1>
+      <p>
+        Project done with Angular FrameWork, click in the menu for see and test
+        the Exercises
+      </p>
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Balance</th>
+            <th>Label</th>
+            <th>Description</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="transaction">
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.balance }}</td>
+            <td>{{ transaction.label }}</td>
+            <td>{{ transaction.description }}</td>
+            <td>{{ transaction.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

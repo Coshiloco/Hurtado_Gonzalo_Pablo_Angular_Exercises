@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule aquí
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,9 @@ import { ExerciseTwoComponent } from './exercise-two/exercise-two.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponentComponent } from './details-component/details-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +21,9 @@ import { HeaderComponentComponent } from './header-component/header-component.co
     ExerciseThreeComponent,
     HeaderComponentComponent,
     FooterComponentComponent,
+    DetailsComponentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
