@@ -6,11 +6,61 @@
 
   <div class="hero-content">
     <div class="hero-content-info" data-aos="fade-left">
-      <h1>Pablo Hurtado Gonzalo Exercises</h1>
+      <h1>Pablo Hurtado Gonzalo Exercise Two</h1>
       <p>
-        Project done with Angular FrameWork, click in the menu for see and test
-        the Exercises
+        Make a calculator with: • Two numeric entry fields, separated by a
+        drop-down list showing the four usual operations. • A button that
+        triggers the calculation. • A display area of the result of the last
+        operation. • A historical area, with for each completed operation:  The
+        time of the operation.  The requested operation.  His result.  A
+        button to erase this entry from the history.
       </p>
+
+      <div class="calculator">
+        <label for="num1">First Number:</label>
+        <input
+          type="number"
+          id="num1"
+          [(ngModel)]="num1"
+          class="form-input"
+          aria-label="First Number"
+        />
+
+        <label for="operation">Operation:</label>
+        <select
+          id="operation"
+          [(ngModel)]="operation"
+          class="form-input"
+          aria-label="Operation"
+        >
+          <option value="add">+</option>
+          <option value="subtract">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+
+        <label for="num2">Second Number:</label>
+        <input
+          type="number"
+          id="num2"
+          [(ngModel)]="num2"
+          class="form-input"
+          aria-label="Second Number"
+        />
+
+        <button (click)="calculate()">Calculate</button>
+        <div class="result">Result: {{ result }}</div>
+        <div class="history">
+          <h2>History</h2>
+          <div *ngFor="let entry of history">
+            <p>
+              Time of the Operation ( {{ entry.time }} ) :
+              {{ entry.operation }} = {{ entry.result }}
+              <button (click)="deleteEntry(entry)">Delete</button>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
